@@ -1,0 +1,21 @@
+<!-- <div class="mt-5 pt-5">
+  <button class="btn  btn-primary" (click)="showToastr()">show Toastr</button>
+</div> -->
+
+<section class=" d-flex align-items-end">
+
+<div class="container ">
+    <h1>OUR LATEST MOVIES</h1>
+    <owl-carousel-o [options]="customOptions">
+  
+      <ng-container *ngFor="let movie of trendingMovies">
+        <ng-template carouselSlide [id]="movie.id">
+          <a [routerLink]='["/moviedetails" , movie.id]'>
+          <img [src]="imgPrefix+movie.poster_path" [alt]="movie.alt" [title]="movie.title">
+        </a>
+        </ng-template>
+      </ng-container>
+  
+    </owl-carousel-o>
+</div>
+</section>

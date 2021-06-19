@@ -1,0 +1,25 @@
+<div class="w-75 m-auto py-5">
+
+<form class="mt-5" [formGroup]='loginForm' (ngSubmit)='submitloginForm(loginForm)'>
+    
+    <div class="form-group">
+        <label for="email">email</label>
+        <input formControlName='email' class="form-control" type="email" id="email">
+        <div *ngIf="loginForm.get('email')?.errors != null && loginForm.get('email')?.touched" class="alert my-2 alert-danger">
+            <p *ngIf="loginForm.get('email')?.errors?.required">email is required</p>
+            <p *ngIf="loginForm.get('email')?.errors?.minlength">email is invalid</p>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="password">password</label>
+        <input formControlName='password' class="form-control" type="password" id="password">
+        <div *ngIf="loginForm.get('password')?.errors != null && loginForm.get('password')?.touched" class="alert my-2 alert-danger">
+            <p *ngIf="loginForm.get('password')?.errors?.required">password is required</p>
+            <p *ngIf="loginForm.get('password')?.errors?.pattern">password must start with uppercase ...</p>
+        </div>
+    </div>
+    
+    <button   [disabled]='loginForm.invalid' class="btn btn-info" type="submit">login</button>
+        </form>
+        </div>

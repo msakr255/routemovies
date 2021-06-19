@@ -1,0 +1,25 @@
+ .navbar-brand
+{
+    font-weight: 900;
+    font-size: 30px;
+    color: aqua;
+}
+
+i
+{
+    cursor: pointer;
+}
+
+a
+{
+    cursor: pointer;
+}
+
+nav
+{
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index:55;
+    background-color: #131722;
+}

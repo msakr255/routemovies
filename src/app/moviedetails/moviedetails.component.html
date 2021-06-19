@@ -1,0 +1,22 @@
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <img class="w-100" [src]="imgPrefix+moviedetails?.poster_path" alt="">
+        </div>
+
+        <div class="col-md-8">
+            <h2>{{moviedetails?.title}}</h2>
+            <h3>{{moviedetails?.tagline}}</h3>
+            <div class="links">
+                <a target="_blank" href="{{moviedetails?.homepage}}"> movie watch</a>
+                <a>Drama</a>
+                <a>Thriller</a>
+            </div>
+            <h6>vote : {{moviedetails?.vote_average}}</h6>
+            <h6>vote count : {{moviedetails?.vote_count}}</h6>
+            <h6> popularity : {{moviedetails?.popularity}}</h6>
+            <h6>release date : {{moviedetails?.release_date}}</h6>
+            <p>{{moviedetails?.overview}}</p>
+        </div>
+    </div>
+</div>

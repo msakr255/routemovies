@@ -1,0 +1,66 @@
+
+<nav class="navbar navbar-expand-lg position-fixed">
+    <a class="navbar-brand" href="#">
+      Noxe
+    </a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        
+        <li class="nav-item">
+          <a *ngIf = 'islogin' class="nav-link" routerLink="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a  *ngIf = 'islogin'class="nav-link" routerLink="about">About</a>
+        </li>  
+         <li class="nav-item">
+          <a *ngIf = 'islogin' class="nav-link" routerLink="movies">Movies</a>
+        </li>  
+         <li class="nav-item">
+          <a  *ngIf = 'islogin'class="nav-link" routerLink="tv">Tv shows</a>
+        </li>   
+        <li class="nav-item">
+          <a *ngIf = 'islogin' class="nav-link" routerLink="network">Network</a>
+        </li>   
+        <li class="nav-item">
+          <a *ngIf = 'islogin' class="nav-link" routerLink="people">Pepole</a>
+        </li>
+      </ul>
+
+      <div class="center-nav d-flex ">
+      <form class="form-inline my-2 my-lg-0">
+        <!-- <input [(ngModel)]="term" class=" form-control mr-sm-2 bg-transparent text-white" type="search" placeholder="Search" aria-label="Search"> -->
+      </form>
+
+      <div class="social-media">
+        <i class="fab mx-2 fa-instagram"></i>
+        <i class="fab mx-2 fa-spotify"></i>
+        <i class="fab mx-2 fa-facebook"></i>
+        <i class="fab mx-2 fa-youtube"></i>
+        <i class="fab mx-2 fa-soundcloud"></i>
+      </div>
+    </div>
+
+      <div class="link-Form d-flex justify-content-end">
+      <ul class="navbar-nav mr-auto" >
+        
+        <li class="nav-item">
+          <a *ngIf = '!islogin' class="nav-link" routerLink="login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf = '!islogin' class="nav-link" routerLink="register">Register</a>
+        </li>  
+         <li class="nav-item">
+          <a *ngIf = 'islogin' class="nav-link" (click)='isLogOut()'>Logout</a>
+        </li>  
+        <li class="nav-item">
+          <a *ngIf = 'islogin' class="nav-link" routerLink="settings" >Settings</a>
+        </li>  
+      </ul>
+    </div>
+
+    </div>
+
+  </nav>
+
+  
